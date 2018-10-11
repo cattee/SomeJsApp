@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="../i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="../css/amazeui.min.css" />
+    <link rel="stylesheet" href="../css/admin2.css">
+    <link rel="stylesheet" href="../css/app2.css">
+    <script src="../js/echarts.min.js"></script>
+</head>
+
+<body data-type="index">
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="../img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+        </div>
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+    </header>
+
+    <div class="tpl-page-container tpl-page-header-fixed">
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title">
+                <strong>Amaze UI</strong> <small>网页应用集</small>
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="am-icon-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list active">
+                            <i class="am-icon-table"></i>
+                            <span>单词默写助手</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right tpl-left-nav-more-ico-rotate"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" style="display:block">
+                            <li>
+                                <a href="word_.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <i class="am-icon-pencil"></i>
+                                    <span> 单词默写 </span>
+                                </a>
+                                <a href="word_add.html" class="active">
+                                    <i class="am-icon-angle-right"></i>
+                                    <i class="am-icon-plus"></i>
+                                    <span> 单词录入 </span>
+                                </a>
+                                <a href="word_total.html">
+                                    <i class="am-icon-angle-right"></i>
+                                    <i class="am-icon-bookmark"></i>
+                                    <span> 默写统计 </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="am-icon-puzzle-piece"></i>
+                            <span> 正在开发...</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="am-icon-puzzle-piece"></i>
+                            <span> 正在开发...</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="am-icon-puzzle-piece"></i>
+                            <span> 正在开发...</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-content-page-title">
+                Amaze UI 网页应用首页
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="#" class="am-icon-home">首页</a></li>
+                <li><a href="#">分类</a></li>
+                <li class="am-active">内容</li>
+            </ol>
+            <div class="row">
+                <div class="am-u-lg-12 am-u-md-12 am-u-sm-12">
+                    <div class="am-panel am-panel-secondary">
+                        <div class="am-panel-hd">
+                            <h1>单词录入</h1>
+                        </div>
+                        <div class="am-panel-bd">
+                            <div class="tpl-form-body">
+                                <form class="am-form tpl-form-line-form">
+                                    <div class="am-form-group">
+                                        <label for="user-name" class="am-u-sm-1 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                        <div class="am-u-sm-3 am-u-end">
+                                            <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字">
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <label for="user-name" class="am-u-sm-1 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                        <div class="am-u-sm-3 am-u-end">
+                                            <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字">
+                                        </div>
+
+                                    </div>
+                                    <div class="am-form-group">
+                                        <label for="user-name" class="am-u-sm-1 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                        <div class="am-u-sm-3 am-u-end">
+                                            <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字">
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <label for="user-name" class="am-u-sm-1 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                        
+                                        <div class="am-u-sm-3 am-u-end">
+                                            <select data-am-selected="{btnSize: 'sm'}">
+                                                <option value="a">产品</option>
+                                                <option value="b">设计</option>
+                                                <option value="o">开发</option>
+                                                <option value="m">测试</option>
+                                                <option value="d">运维</option>
+                                                <option value="o">开发</option>
+                                                <option value="m">测试</option>
+                                                <option value="d">运维</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <label for="user-name" class="am-u-sm-1 am-form-label"></label>
+                                        <div class="am-u-sm-3 am-u-end">
+                                            <button type="button" class="am-btn am-btn-primary am-radius">添加</button>
+                                            <button type="button" class="am-btn am-btn-success am-radius">清空</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <footer class="am-panel-footer">面板页脚</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/amazeui.min.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/app2.js"></script>
+</body>
+
+</html>

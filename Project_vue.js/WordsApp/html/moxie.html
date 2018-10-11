@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="../i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="../css/amazeui.min.css" />
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <script src="../js/vue.js"></script>
+</head>
+
+<body data-type="index">
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <strong>Amaze UI</strong> <small>网页应用集</small>
+        </div>
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+    </header>
+
+    <div class="am-cf admin-main">
+        <!-- sidebar start -->
+        <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+            <div class="am-offcanvas-bar admin-offcanvas-bar">
+                <ul class="am-list admin-sidebar-list">
+                    <li><a href="index1.html"><span class="am-icon-home"></span> 首页 </a></li>
+                    <li class="admin-parent">
+                        <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 单词默写工具 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                        <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
+                            <li><a href="moxie.html"><span class="am-icon-pencil am-icon-fw"></span> 单词默写 </a></li>
+                            <li><a href="word_add1.html"><span class="am-icon-plus am-icon-fw"></span> 单词录入 </a></li>
+                            <li><a href="total.html"><span class="am-icon-line-chart am-icon-fw"></span> 单词统计 </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span class="am-icon-puzzle-piece"></span> 正在开发...</a></li>
+                    <li><a href="#"><span class="am-icon-puzzle-piece"></span> 正在开发...</a></li>
+                    <li><a href="#"><span class="am-icon-puzzle-piece"></span> 正在开发...</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- sidebar end -->
+
+        <!-- content start -->
+        <div class="admin-content">
+            <div class="admin-content-body">
+                <div class="am-cf am-padding">
+                    <ol class="am-breadcrumb">
+                        <li><a href="#" class="am-icon-home"><strong class="am-text-primary am-text-lg">首页</strong></a></li>
+                        <li><a href="#"><small>单词默写工具</small></a></li>
+                        <li class="am-active"><small>单词录入</small></li>
+                    </ol>
+                </div>
+                <div class="row" id="app_moxie">
+                    <div class="am-u-lg-6 am-u-md-12 am-u-sm-12" v-for="(item,index) in moxie_list">
+                        <div class="am-panel am-panel-secondary">
+                            <div class="am-panel-hd">
+                                <h1>{{(index+1) + '. ' + item.kannji}}</h1>
+                            </div>
+                            <div class="am-panel-bd">
+                                <form class="am-form am-form-horizontal" id="app_add1">
+                                    <div class="am-form-group">
+                                        <label class="am-u-sm-2 am-form-label">假名<small> kana</small></label>
+                                        <div class="am-u-sm-4 am-u-end">
+                                            <input type="text" class="am-form-field" v-model="item.kana">
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <label class="am-u-sm-2 am-form-label">选择释义<small> yimi</small></label>
+                                        <div class="am-u-sm-4 am-u-end">
+                                            <label class="am-radio-inline" v-for="option in item.options">
+                                                <input type="radio" :value="option" v-model="item.yimi" name="yimi"> {{option}}
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <label class="am-u-sm-2 am-form-label">类型<small> type</small></label>
+                                        <div class="am-u-sm-4 am-u-end">
+                                            <select id="wordtype" v-model="item.type">
+                                                <option value="1">动1</option>
+                                                <option value="2">动2</option>
+                                                <option value="3">形1</option>
+                                                <option value="4">形2</option>
+                                                <option value="5">名词</option>
+                                                <option value="6">副词</option>
+                                                <option value="7">代词</option>
+                                                <option value="8">连体词</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="admin-content-footer">
+            <hr>
+            <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
+        </footer>
+    </div>
+    <!-- content end -->
+
+    </div>
+
+    <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/amazeui.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/moxie.js"></script>
+  
+</body>
+
+</html>
