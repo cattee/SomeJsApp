@@ -1,1 +1,6 @@
-
+/* Write your styles */
+.am-form-label {
+    color: #999;
+    font-weight: normal;
+    font-size: 14px;
+}
